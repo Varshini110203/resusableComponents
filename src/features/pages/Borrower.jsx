@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Tabs from "../components/Tabs";
-import BorrowerTable from "../components/BorrowerTable";
-import "../styles/layout.css";
+import Tabs from "../../core/components/Tabs";
+import BorrowerTable from "../../core/components/BorrowerTable";
+import "../../core/styles/layout.css";
 
 const Borrower = () => {
   const [activeTab, setActiveTab] = useState("Wage Earner");

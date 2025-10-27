@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "c:/Varshini/resusableComponents/src/hooks/useTheme.js"
+import { useTheme } from "../hooks/useTheme";
 import "../styles/layout.css";
 
 const Header = () => {

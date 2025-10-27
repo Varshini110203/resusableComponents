@@ -48,12 +48,12 @@ import Header from "../src/core/components/Header";
 import Sidebar from "../src/core/components/SideBar";
 
 // Pages
-import Dashboard from "../src/core/Pages/Dashboard";
-import Loans from "../src/core/Pages/Loans";
-import Borrower from "../src/core/Pages/Borrower";
-import BankStatement from "../src/core/Pages/BankStatement";
-import RealEstateOwned from "../src/core/Pages/RealEstateOwned";
-import Summary from "../src/core/Pages/Summary";
+import Dashboard from "../src/features/Pages/Dashboard";
+import Loans from "../src/features/Pages/Loans";
+import Borrower from "../src/features/Pages/Borrower";
+import BankStatement from "../src/features/Pages/BankStatement";
+import RealEstateOwned from "../src/features/Pages/RealEstateOwned";
+import Summary from "../src/features/Pages/Summary";
 
 // Styles
 import "../src/core/styles/layout.css";
