@@ -14,3 +14,5 @@ export default defineConfig(() => {
     assetsInclude: ['**/*.PNG', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
   };
 });
+
+

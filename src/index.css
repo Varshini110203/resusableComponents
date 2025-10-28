@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure full dark mode coverage */
+html, body, #root {
+  height: 100%;
+}
+
+/* Force dark background on body when in dark mode */
+.dark {
+  background-color: #111827; /* gray-900 */
+  color: #f9fafb; /* gray-50 */
+}
+
+.dark body {
+  background-color: #111827; /* gray-900 */
+  color: #f9fafb; /* gray-50 */
+}

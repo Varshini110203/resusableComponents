@@ -1,39 +1,51 @@
 import React from "react";
 
 const BorrowerTable = () => {
+  const data = [
+    { id: 1, name: "John Doe", income: "$75,000", status: "Active" },
+    { id: 2, name: "Jane Smith", income: "$85,000", status: "Active" },
+    { id: 3, name: "Bob Johnson", income: "$65,000", status: "Pending" },
+  ];
+
   return (
-    <div className="borrower-table">
-      <button className="add-btn">+ Add Employer</button>
-      <table>
+    <div className="mt-6">
+      <table className="w-full border-collapse shadow-sm rounded-lg overflow-hidden">
         <thead>
-          <tr>
-            <th>Employer Name</th>
-            <th>Date of Hire</th>
-            <th>Active Employment Flag</th>
-            <th>Employment Verified Thru Date</th>
-            <th>Date of Termination</th>
-            <th>Months Employed</th>
-            <th>Total Monthly Income</th>
-            <th>Actions</th>
+          <tr className="bg-gray-50">
+            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b border-gray-300">
+              Name
+            </th>
+            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b border-gray-300">
+              Income
+            </th>
+            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b border-gray-300">
+              Status
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>New Employer</td>
-            <td>01-01-2022</td>
-            <td><input type="checkbox" /></td>
-            <td></td>
-            <td></td>
-            <td>0.00</td>
-            <td>$0.00</td>
-            <td>
-              <button>✏️</button>
-              <button>🗑️</button>
-            </td>
-          </tr>
+          {data.map((row) => (
+            <tr
+              key={row.id}
+              className="hover:bg-gray-50 transition-colors border-b border-gray-200"
+            >
+              <td className="px-4 py-3 text-gray-800">{row.name}</td>
+              <td className="px-4 py-3 text-gray-600">{row.income}</td>
+              <td className="px-4 py-3">
+                <span
+                  className={`px-2 py-1 rounded-full text-xs font-medium ${
+                    row.status === "Active"
+                      ? "bg-green-100 text-green-800"
+                      : "bg-yellow-100 text-yellow-800"
+                  }`}
+                >
+                  {row.status}
+                </span>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
-      <button className="comment-btn">Show Commentary</button>
     </div>
   );
 };
